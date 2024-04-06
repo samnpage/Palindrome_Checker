@@ -28,3 +28,6 @@ This is a simple web application that checks if a word entered by the user is a 
 ## Example
 Enter a word: radar
 Result: radar is a palindrome.
+
+Enter a word: cat
+Result: cat is not a palindrome.
