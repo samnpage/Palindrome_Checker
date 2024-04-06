@@ -11,7 +11,7 @@ This is a simple web application that checks if a word entered by the user is a 
 ## How to Use
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/Palindrome_Checker.git
+   git clone https://github.com/samnpage/Palindrome_Checker.git
 
 2. Navigate to the directory:
    ```bash
@@ -26,6 +26,7 @@ This is a simple web application that checks if a word entered by the user is a 
 6. The application will display whether the word entered is a palindrome or not.
 
 ## Example
+
 Enter a word: radar
 Result: radar is a palindrome.
 
