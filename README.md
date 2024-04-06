@@ -25,7 +25,7 @@ This is a simple web application that checks if a word entered by the user is a 
 
 6. The application will display whether the word entered is a palindrome or not.
 
-## Example
+## Examples
 Input: racecar
 
 Result: **racecar** is a palindrome.
