@@ -26,9 +26,8 @@ This is a simple web application that checks if a word entered by the user is a 
 6. The application will display whether the word entered is a palindrome or not.
 
 ## Example
+- Enter a word: radar
+- Result: radar is a palindrome.
 
-Enter a word: radar
-Result: radar is a palindrome.
-
-Enter a word: cat
-Result: cat is not a palindrome.
+- Enter a word: cat
+- Result: cat is not a palindrome.
