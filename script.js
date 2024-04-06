@@ -43,37 +43,38 @@
 
 // Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
 
+
+
 const palindromeDiv = document.querySelector(".palindrome-div");
 const resultDiv = document.querySelector("#result");
-console.log(palindromeDiv);
 const checkButton = document.getElementById("check-btn");
 
 const check = () => {
+
     const textInput = document.getElementById("text-input").value;
     if (textInput === "") {
         alert("Please input a value");
         return;
     }
-    const strArray = textInput.split("");
+
     const responseParagraph = document.querySelector(".response");
 
     if (!responseParagraph) {
-        // const responseDiv = document.createElement("div");
         resultDiv.classList.add("response-container");
 
         const newResponseParagraph = document.createElement("p");
         newResponseParagraph.classList.add("response");
 
-        if(isPalindrome(strArray)) {
+        if(isPalindrome(textInput)) {
             newResponseParagraph.innerHTML = `<strong>${textInput}</strong> is a palindrome`;
         } else {
-            newResponseParagraph.innerHTML = `<strong>${textInput}</strong> is a palindrome`;
+            newResponseParagraph.innerHTML = `<strong>${textInput}</strong> is not a palindrome`;
         }
 
         resultDiv.appendChild(newResponseParagraph);
         palindromeDiv.appendChild(resultDiv);
     } else {
-        if(isPalindrome(strArray)) {
+        if(isPalindrome(textInput)) {
             responseParagraph.innerHTML = `<strong>${textInput}</strong> is a palindrome`;
         } else {
             responseParagraph.innerHTML = `<strong>${textInput}</strong> is not a palindrome`;
@@ -81,22 +82,21 @@ const check = () => {
     }
 
     document.getElementById("text-input").value = "";
+
 };
 
 checkButton.addEventListener("click", () => {
     check();
 });
 
-const isPalindrome = (strArray) => {
-    // Convert each character to lowercase and remove punctuation and spacing
-    const processedStr = strArray
-        .map(char => char.toLowerCase())
-        .filter(char => /[a-z0-9]/.test(char)) // Keep only alphanumeric characters
-        .join(""); // Join the characters back into a string
+const isPalindrome = (textInput) => {
 
-    // Create a reversed version of the processed string
+    const processedStr = textInput
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, "");
+
     const reversedStr = processedStr.split("").reverse().join("");
 
-    // Check if the processed string is equal to its reversed version
     return processedStr === reversedStr;
+    
 };
